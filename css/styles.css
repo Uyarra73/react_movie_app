@@ -106,7 +106,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 6px #ddd;
     padding: 60px 25px;
-
+    flex-grow: 1;
 }
 
 button, 
@@ -171,8 +171,28 @@ input[type="button"] {
 
 }
 
+/* Estilos footer */
+
 .footer {
     grid-area: footer;  
-    border: 5px solid black;
-    background: lightcoral;
+    background: #d1defa;
+    color: #454545;
+    border-top: 1px solid white;
+    text-align: left;
+    line-height: 68px;
+    padding-left: 25px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1085px) {
+    .content {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .peli-item {
+        width: 80%;
+    }
 }
