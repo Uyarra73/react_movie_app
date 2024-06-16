@@ -1,7 +1,7 @@
 /* Estilos generales */
 
 body {
-    background: #d1defa;
+    background: #8a8d91;
     font-family: sans-serif, Arial, Helvetica;
     text-align: center;
     padding: 0px;
@@ -24,7 +24,7 @@ body {
 
 .header {
     grid-area: header;
-    background: white;
+    background: rgb(219, 220, 223);
     text-align: left;
     font-style: italic;
     display: flex;
@@ -93,7 +93,7 @@ body {
 
 .content {
     grid-area: content;
-    background: #f6f7f9;
+    background: #adc5f5;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -104,7 +104,7 @@ body {
     background: white;
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 6px #ddd;
+    box-shadow: 0px 0px 6px #858484;
     padding: 60px 25px;
     flex-grow: 1;
 }
@@ -130,6 +130,8 @@ input[type="button"] {
 
  .peli-item .edit:hover {
     background: #e77b00;
+    color: black;
+    font-weight: 600;
   }
 
 .peli-item .delete:hover {
@@ -175,12 +177,14 @@ input[type="button"] {
 
 .footer {
     grid-area: footer;  
-    background: #d1defa;
-    color: #454545;
-    border-top: 1px solid white;
-    text-align: left;
-    line-height: 68px;
+    background: rgb(219, 220, 223);
+    color: black;
+    border-top: 1px solid rgb(91, 91, 92);
+    text-align: center;
     padding-left: 25px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-style: italic;
 }
 
 /* Media queries */
