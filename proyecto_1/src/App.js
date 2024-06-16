@@ -31,7 +31,6 @@ function App() {
       <section className="content">
           {/* Listado de peliculas*/}
           <Listado />
-          
       </section>
 
       {/*Barra lateral*/}
