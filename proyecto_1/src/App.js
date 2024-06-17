@@ -4,9 +4,13 @@ import './App.css';
 import Listado from './components/Listado';
 import Buscador from './components/Buscador';
 import Crear from './components/Crear';
+import { useState } from'react';
 
 
 function App() {
+  // Pasamos el estado del componente Listado a la App directamente para luego pasar las props de padre a hijo
+  const [listadoState, setListadoState] = useState([]);
+
   return (
     <div className="layout">
       {/*Cabecera*/}
@@ -29,8 +33,8 @@ function App() {
 
       {/*Contenido principal*/}
       <section className="content">
-          {/* Listado de peliculas*/}
-          <Listado />
+          {/* Listado de peliculas: pasamos las props al componente*/}
+          <Listado listadoState={listadoState} setListadoState={setListadoState}/>
       </section>
 
       {/*Barra lateral*/}
@@ -39,7 +43,7 @@ function App() {
           <Buscador />
 
           {/* Crear */}
-          <Crear />
+          <Crear setListadoState={setListadoState}/>
       </aside>
 
       {/*Pie de pagina*/}
