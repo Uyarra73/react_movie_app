@@ -40,7 +40,7 @@ function App() {
       {/*Barra lateral*/}
       <aside className="lateral">
           {/* Buscador */}
-          <Buscador />
+          <Buscador listadoState={listadoState} setListadoState={setListadoState}/>
 
           {/* Crear */}
           <Crear setListadoState={setListadoState}/>
