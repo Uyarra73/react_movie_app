@@ -128,6 +128,22 @@ input[type="button"] {
     box-shadow: 0px 0px 6px #a59f9f;
  }
 
+.content input[type="text"],
+.content textarea {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f6f7f9;
+    color: #454545;
+    width:80%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+}
+
+
  .peli-item .edit:hover {
     background: #e77b00;
     color: black;

@@ -44,19 +44,24 @@ const Listado = ({listadoState, setListadoState}) => {
 
   return (
     <>
+        {/* Condicion para renderizar el formulario de edicion */}
         {listadoState != null ? 
           listadoState.map(peli => {
             return (
               <article key={peli.id} className="peli-item">
                   <h3 className="title">{peli.titulo}</h3>
-                  <p className="decription">{peli.descripcion}</p>
+                  <p className="description">{peli.descripcion}</p>
                   <button className="edit" onClick={()=> setEditar(peli.id)}>Editar</button>
                   &nbsp;
                   <button className="delete" onClick={()=>borrarPeli(peli.id)}>Eliminar</button>
 
                   {/* Formulario de edicion de peliculas */}
                   {editar === peli.id && (
-                    <Editar />
+                    <Editar 
+                      peli={peli}
+                      conseguirPeliculas={conseguirPeliculas}
+                      setEditar={setEditar}
+                      setListadoState={setListadoState}/>
                   )}
               </article>
             );
